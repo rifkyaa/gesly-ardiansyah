@@ -23,7 +23,7 @@ const Hero = () => {
         opacity: 1,
         y: 0,
         visibility: "visible",
-        transition: { duration: 0.8, ease: "easeInOut",         delay: 0.6 },
+        transition: { duration: 0.8, ease: "easeInOut", delay: 0.6 },
       },
     };
 
@@ -41,11 +41,61 @@ const Hero = () => {
       <motion.div style={{ x: translateX }} className='bg-bgColor1 absolute top-0 h-[50vh] lg:w-[90%] w-full'></motion.div>
       <motion.div style={{ x: translateX2 }} className='bg-bgColor2 absolute bottom-0 h-[50vh] lg:w-[90%] w-full'></motion.div>
       <div className='flex flex-col items-center z-10 w-full h-[75%] md:h-[62%] lg:h-[60%]'>
-        <motion.p style={{ y: translateY}} className='uppercase md:text-lg font-poppins md:tracking-[0.5rem]'>Seniman - Model - Talent</motion.p>
+      <motion.p 
+        style={{ y: translateY }} 
+        initial={{ opacity: 0, y: 50 }} 
+        animate={{ 
+          opacity: 1, 
+          y: 0, 
+          transition: { 
+            delay: 1.6,
+          } 
+        }} 
+        className='uppercase md:text-lg font-poppins md:tracking-[0.5rem]'
+      >
+        Seniman - Model - Talent
+      </motion.p>
         <div className='relative w-full leading-tight lg:leading-none flex flex-col justify-center items-center'>
-          <motion.h1 style={{ x: translateX }} className="uppercase text-[3.5rem] md:text-[7rem] lg:text-[8rem] font-playfair text-center md:tracking-wider lg:tracking-widest">Gesly</motion.h1>
-          <motion.h1 style={{ x: translateX2 }} className="uppercase text-[3.5rem] md:text-[7rem] lg:text-[8rem] font-playfair text-center md:tracking-wider lg:tracking-widest">Ardiansyah</motion.h1>
-          <motion.div style={{ x: translateX2, }} className='absolute bottom-2 md:bottom-[1.3rem] lg:bottom-2 md:w-[90%] lg:w-[85%] h-[0.2rem] w-full rounded-full bg-primaryDark'></motion.div>
+          <motion.h1 
+            style={{ x: translateX }} 
+            className="uppercase text-[3.5rem] md:text-[7rem] lg:text-[8rem] font-playfair text-center md:tracking-wider lg:tracking-widest"
+            initial={{ opacity: 0, x: -50 }} 
+            animate={{ 
+              opacity: 1.3, 
+              x: 0, 
+              transition: { 
+                delay: 1,
+              } 
+            }} 
+          >
+            Gesly
+          </motion.h1>
+          <motion.h1 
+            style={{ x: translateX2 }}
+            className="uppercase text-[3.5rem] md:text-[7rem] lg:text-[8rem] font-playfair text-center md:tracking-wider lg:tracking-widest"
+            initial={{ opacity: 0, x: 50 }} 
+            animate={{ 
+              opacity: 1, 
+              x: 0, 
+              transition: { 
+                delay: 1.3,
+              } 
+            }} 
+          >
+            Ardiansyah
+          </motion.h1>
+          <motion.div 
+            style={{ x: translateX2, }} 
+            className='absolute bottom-2 md:bottom-[1.3rem] lg:bottom-2 md:w-[90%] lg:w-[85%] h-[0.2rem] w-full rounded-full bg-primaryDark'
+            initial={{ opacity: 0, x: 50 }} 
+            animate={{ 
+              opacity: 1, 
+              x: 0, 
+              transition: { 
+                delay: 1.3,
+              } 
+            }}
+          ></motion.div>
         </div>
       </div>
       <Image className="absolute bottom-0 w-[20rem] z-20" src={heroImg} alt="imgHero"></Image>

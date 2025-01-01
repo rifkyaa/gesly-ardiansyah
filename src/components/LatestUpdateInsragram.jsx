@@ -37,8 +37,8 @@ const LatestUpdateInsragram = () => {
   return (
     <section className='p-9 my-9  grid grid-cols-1 lg:grid-cols-2 gap-7 relative border-b-2 border-t-2 border-primaryDark dark:border-primaryLight ' ref={targetRef}>
       <motion.div style={{ position: positionSticky }} className='flex flex-col py-5 lg:w-[90%] lg:h-[70vh] gap-3 items-start bg-primaryLight dark:bg-primaryDark  lg:top-20 top-16 text-primaryDark dark:text-primaryLight z-20'>
-        <h1 className="text-4xl font-playfair uppercase">Latest Instagram Updates</h1>
-        <p className='font-poppins text-justify'>Update terbaru dari Instagram saya menampilkan hasil kolaborasi dan eksplorasi kreatif. Jangan lewatkan aktivitas menarik lainnya dengan mengunjungi akun media sosial saya</p>
+        <h1 className="text-3xl md:text-4xl font-playfair uppercase">Latest Instagram Updates</h1>
+        <p className='font-poppins text-justify'>Update terbaru dari Instagram saya menampilkan hasil kolaborasi dan eksplorasi kreatif.</p>
       </motion.div>
       {error && <p className="text-red-500">{error}</p>}
 
