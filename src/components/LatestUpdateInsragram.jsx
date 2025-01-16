@@ -43,20 +43,38 @@ const LatestUpdateInsragram = () => {
       {error && <p className="text-red-500">{error}</p>}
 
       <div className='flex flex-col gap-5 z-10 overflow-hidden'>
-        {posts.length > 0 ? (
+      {posts.length > 0 ? (
           posts.map((post) => (
             <div key={post.id} className="flex flex-col justify-center items-center border rounded-lg p-4">
-              <img
-                src={post.media_url}
-                alt="Instagram post"
-                className="w-full object-contain mb-4 rounded"
+              {post.media_type === 'IMAGE' && (
+                <img
+                  src={post.media_url}
+                  alt="Instagram post"
+                  className="w-full object-contain mb-4 rounded"
                 />
+              )}
+              {post.media_type === 'VIDEO' && (
+                <video
+                  controls
+                  src={post.media_url}
+                  className="w-full object-contain mb-4 rounded"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              )}
+              {post.media_type === 'CAROUSEL_ALBUM' && (
+                <img
+                  src={post.media_url}
+                  alt="Instagram carousel post"
+                  className="w-full object-contain mb-4 rounded"
+                />
+              )}
               <Link
                 href={post.permalink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primaryDark dark:text-primaryLight"
-                >
+              >
                 View on Instagram
               </Link>
             </div>
