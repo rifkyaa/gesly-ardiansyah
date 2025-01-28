@@ -38,7 +38,7 @@ const Performance = () => {
 
   return (
     <section
-      className="relative overflow-hidden py-6 md:px-9 md:py-9"
+      className="relative overflow-hidden py-6 md:px-9 md:py-9 border-b-2 border-primaryDark dark:border-primaryLight "
       ref={container}
     >
       <h1 className="font-playfair text-5xl uppercase text-center dark:text-primaryLight">

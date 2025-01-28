@@ -9,6 +9,8 @@ import Contact from "@/components/Contact"
 import Lenis from "lenis"
 import { useEffect, useState } from "react"
 import Loader from "@/components/Loader"
+import InfinitySlider from "@/components/InfinitySlider"
+import StickySosmed from "@/components/StickySosmed"
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -50,7 +52,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="bg-primaryLight dark:bg-primaryDark">
+    <div className="relative bg-primaryLight dark:bg-primaryDark">
       {isLoading ? (
         <Loader />
       ) : (
@@ -58,11 +60,13 @@ export default function Home() {
           <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
           <main className="max-w-7xl mx-auto relative">
             <Hero />
+            {/* <StickySosmed /> */}
             <About />
             <Music isDarkMode={isDarkMode} />
             <LatestUpdateInsragram />
             <Project />
             <Performance />
+            <InfinitySlider />
             <Contact />
           </main>
         </>
