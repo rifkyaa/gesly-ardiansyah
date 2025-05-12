@@ -43,7 +43,7 @@ const projects = () => {
     },
     {
       id: 6,
-      label: "Persipa Pati",
+      label: "Launching Jersey Persipa Pati 2024/2025",
       src: "/images/imgProject6.webp",
       gridColStart: "2",
       gridRowStart: "5 / span 2",
