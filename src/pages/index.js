@@ -10,7 +10,6 @@ import Lenis from "lenis"
 import { useEffect, useState } from "react"
 import Loader from "@/components/Loader"
 import InfinitySlider from "@/components/InfinitySlider"
-import StickySosmed from "@/components/StickySosmed"
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -60,7 +59,6 @@ export default function Home() {
           <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
           <main className="max-w-7xl mx-auto relative">
             <Hero />
-            {/* <StickySosmed /> */}
             <About />
             <Music isDarkMode={isDarkMode} />
             <LatestUpdateInsragram />
